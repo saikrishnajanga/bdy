@@ -153,12 +153,12 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit}
 
 /* ===== 5. TIMELINE ===== */
 #timeline{background:transparent}
-.timeline-wrapper{position:relative;max-width:800px;width:100%}
-.timeline-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--pink),var(--purple),transparent);transform:translateX(-50%)}
-.timeline-item{position:relative;display:flex;margin-bottom:60px}
-.timeline-item:nth-child(odd){flex-direction:row;padding-right:calc(50% + 40px)}
-.timeline-item:nth-child(even){flex-direction:row-reverse;padding-left:calc(50% + 40px)}
-.timeline-dot{position:absolute;left:50%;top:20px;width:16px;height:16px;background:var(--gradient-main);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 20px rgba(255,107,157,0.6);z-index:2}
+.timeline-wrapper{position:relative;max-width:500px;width:100%;display:flex;flex-direction:column;gap:40px}
+.timeline-line{position:absolute;left:24px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--pink),var(--purple),transparent)}
+.timeline-item{position:relative;display:flex;flex-direction:row;padding-left:60px;margin-bottom:0}
+.timeline-item:nth-child(odd){flex-direction:row;padding-right:0}
+.timeline-item:nth-child(even){flex-direction:row;padding-left:60px}
+.timeline-dot{position:absolute;left:24px;top:20px;width:16px;height:16px;background:var(--gradient-main);border-radius:50%;transform:translateX(-50%);box-shadow:0 0 20px rgba(255,107,157,0.6);z-index:2}
 .timeline-dot::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:2px solid rgba(255,107,157,0.3);animation:pulse-ring 2s infinite}
 @keyframes pulse-ring{0%{transform:scale(1);opacity:1}100%{transform:scale(1.8);opacity:0}}
 .timeline-card{padding:0;width:100%;border-radius:16px;overflow:hidden}
@@ -365,11 +365,6 @@ button{cursor:pointer;border:none;outline:none;font-family:inherit}
   .scatter-1,.scatter-2,.scatter-3,.scatter-4{transform:rotate(0deg)}
   .balloon-field{height:350px}
   .balloon-body{width:50px;height:62px}
-  .timeline-line{left:24px}
-  .timeline-item:nth-child(odd),.timeline-item:nth-child(even){flex-direction:row;padding-left:60px;padding-right:0}
-  .timeline-dot{left:24px}
-  .timeline-card{padding:0}
-  .timeline-card-text{padding:14px 16px 18px}
   .timeline-photo img{height:180px}
   .envelope-container{width:85vw;height:55vw}
   .letter{padding:32px 24px;font-size:1.1rem}

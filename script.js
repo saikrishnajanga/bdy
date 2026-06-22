@@ -211,12 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // =============================================
   const galleryGrid = document.getElementById('gallery-grid');
   const galleryPhotos = [
-    { src: 'photos/WhatsApp Image 2026-06-18 at 17.56.15 (1).jpeg', feeling: '"This one always makes me smile. You radiate happiness 💗"' },
-    { src: 'photos/WhatsApp Image 2026-06-18 at 17.56.15.jpeg', feeling: '"I couldn\'t stop staring when I first saw this. Just... wow ✨"' },
+    { src: 'photos/WhatsApp Image 2026-06-18 at 17.56.15.jpeg', feeling: '"This one always makes me smile. You radiate happiness 💗"' },
     { src: 'photos/WhatsApp Image 2026-06-18 at 17.57.06.jpeg', feeling: '"My heartbeat literally changed when I first saw this photo 💓"' },
-    { src: 'photos/WhatsApp Image 2026-06-18 at 17.57.33.jpeg', feeling: '"This look... I wish I could freeze this moment forever 🌟"' },
     { src: 'photos/WhatsApp Image 2026-06-18 at 17.57.34 (1).jpeg', feeling: '"The way you shine here — no filter needed, ever 👑"' },
-    { src: 'photos/WhatsApp Image 2026-06-18 at 17.57.34.jpeg', feeling: '"I saved this the second I saw it. Pure magic ✨"' },
     { src: 'photos/WhatsApp Image 2026-06-18 at 17.57.57.jpeg', feeling: '"Looking at this gives me peace. You\'re my calm in every storm 🌊"' },
     { src: 'photos/WhatsApp Image 2026-06-18 at 18.11.42 (1).jpeg', feeling: '"My favourite human in my favourite photo. Perfect combo 💎"' },
     { src: 'photos/WhatsApp Image 2026-06-18 at 18.11.42.jpeg', feeling: '"Every time I see this I think — how did I get so lucky? 🍀"' },
