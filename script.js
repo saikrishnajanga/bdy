@@ -584,7 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          access_key: '5cc0e96e-6397-402b-a498-8492e498e678',
+          access_key: '2e3cb0d2-735c-4fdc-8e5b-b1c822aed40e',
           subject: '🎂 Surprise Birthday Reply!',
           from_name: 'Birthday Surprise Website',
           name: name,
