@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Happy Birthday Chinnodaaa! A special surprise made with love.">
+  <title>Happy Birthday Chinnodaaa ❤️</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🎂</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Music Auto-play Prompt -->
+  <div class="music-prompt" id="music-prompt">
+    <span>🎵</span> Tap anywhere to feel the magic
+  </div>
+
+  <!-- Falling Petals -->
+  <div class="petals-overlay" id="petals-overlay"></div>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">🌙</button>
+
+  <!-- Music Toggle -->
+  <button class="music-toggle" id="music-toggle" aria-label="Toggle Music">
+    <svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+  </button>
+
+  <!-- ==================== 1. HERO ==================== -->
+  <section id="hero" class="section">
+    <div class="hero-bg-photo"></div>
+    <div class="hero-overlay"></div>
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-subtitle">✨ A Special Day for a Special Person ✨</p>
+      <h1 class="hero-title">
+        <span class="line1">Happy Birthday</span>
+        <span class="line2"><span class="typewriter" id="typewriter"></span> <span class="hero-heart">❤️</span></span>
+      </h1>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 2. COUNTDOWN ==================== -->
+  <section id="countdown" class="section">
+    <h2 class="section-title reveal">Counting Down to Your Day</h2>
+    <div class="countdown-grid">
+      <div class="countdown-card glass reveal">
+        <div class="countdown-number" id="cd-days">00</div>
+        <div class="countdown-label">Days</div>
+      </div>
+      <div class="countdown-card glass reveal">
+        <div class="countdown-number" id="cd-hours">00</div>
+        <div class="countdown-label">Hours</div>
+      </div>
+      <div class="countdown-card glass reveal">
+        <div class="countdown-number" id="cd-mins">00</div>
+        <div class="countdown-label">Minutes</div>
+      </div>
+      <div class="countdown-card glass reveal">
+        <div class="countdown-number" id="cd-secs">00</div>
+        <div class="countdown-label">Seconds</div>
+      </div>
+    </div>
+    <p class="countdown-message reveal" id="countdown-msg">Every second brings us closer to celebrating you! 🎉</p>
+  </section>
+
+  <!-- ==================== 3. POLAROID MOMENTS ==================== -->
+  <section id="moments" class="section">
+    <h2 class="section-title reveal">Moments That Made Me Smile 💕</h2>
+    <div class="polaroid-grid">
+      <div class="polaroid reveal-left">
+        <img src="photos/WhatsApp Image 2026-06-16 at 20.52.51.jpeg" alt="Memory" loading="lazy">
+        <div class="polaroid-caption">
+          <p class="feeling">"The first time I saw this photo, my heart literally stopped. You looked so happy it made my whole day 💗"</p>
+        </div>
+      </div>
+      <div class="polaroid reveal-right">
+        <img src="photos/WhatsApp Image 2026-06-16 at 20.52.51 (1).jpeg" alt="Memory" loading="lazy">
+        <div class="polaroid-caption">
+          <p class="feeling">"This one... I can't even explain. You have no idea how beautiful you look here ✨"</p>
+        </div>
+      </div>
+      <div class="polaroid reveal-left">
+        <img src="photos/WhatsApp Image 2026-06-16 at 21.01.01.jpeg" alt="Memory" loading="lazy">
+        <div class="polaroid-caption">
+          <p class="feeling">"When I first saw this, I saved it immediately. Some photos are just meant to be treasured forever 🌟"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. GIFT CARD GALLERY ==================== -->
+  <section id="gallery" class="section">
+    <h2 class="section-title reveal">Unwrap Your Memories 🎁</h2>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- ==================== 5. MEMORY TIMELINE ==================== -->
+  <section id="timeline" class="section">
+    <h2 class="section-title reveal">Our Journey Together 💫</h2>
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <div class="timeline-photo">
+            <img src="photos/WhatsApp Image 2026-06-18 at 18.13.10.jpeg" alt="Memory" loading="lazy">
+          </div>
+          <div class="timeline-card-text">
+            <div class="timeline-date">The Beginning ✨</div>
+            <h3>When We First Met</h3>
+            <p>I remember exactly when I first saw this — I literally said 'HOW can someone be this amazing?' 💗</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <div class="timeline-photo">
+            <img src="photos/WhatsApp Image 2026-06-18 at 18.13.11.jpeg" alt="Memory" loading="lazy">
+          </div>
+          <div class="timeline-card-text">
+            <div class="timeline-date">The Crazy Times 🎭</div>
+            <h3>Unforgettable Moments</h3>
+            <p>All those late-night talks, the silly fights, the inside jokes that nobody else gets — each one is a treasure I'll never trade for anything.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <div class="timeline-photo">
+            <img src="photos/WhatsApp Image 2026-06-18 at 18.13.11 (1).jpeg" alt="Memory" loading="lazy">
+          </div>
+          <div class="timeline-card-text">
+            <div class="timeline-date">Through Thick & Thin 💪</div>
+            <h3>Always By Your Side</h3>
+            <p>Through every storm and every sunshine, we've been there for each other. That's what makes us — us. Unbreakable, unstoppable.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card glass">
+          <div class="timeline-photo">
+            <img src="photos/WhatsApp Image 2026-06-18 at 18.13.11 (2).jpeg" alt="Memory" loading="lazy">
+          </div>
+          <div class="timeline-card-text">
+            <div class="timeline-date">Today & Forever 💝</div>
+            <h3>Happy Birthday, Chinnodaaa!</h3>
+            <p>Here's to another year of making beautiful memories together. You deserve all the happiness in the world!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 6. SPECIAL MESSAGE ==================== -->
+  <section id="message" class="section">
+    <h2 class="section-title reveal">A Letter For You 💌</h2>
+    <div class="envelope-container reveal" id="envelope-trigger">
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-seal">💌</div>
+      </div>
+    </div>
+    <p class="envelope-hint">Tap the envelope to open your letter</p>
+  </section>
+
+  <!-- Letter overlay -->
+  <div class="letter-container" id="letter-container">
+    <div class="letter" id="letter">
+      <button class="letter-close" id="letter-close">✕</button>
+      <div class="letter-hearts">
+        <span style="left:5%;top:10%;animation-delay:0s;">💗</span>
+        <span style="left:85%;top:20%;animation-delay:1s;">💖</span>
+        <span style="left:15%;top:80%;animation-delay:2s;">💕</span>
+        <span style="left:75%;top:70%;animation-delay:0.5s;">💗</span>
+        <span style="left:45%;top:5%;animation-delay:1.5s;">🫀</span>
+        <span style="left:90%;top:60%;animation-delay:2.5s;">🤍</span>
+      </div>
+      <p>Happiest Birthday to the most beautiful soul 🫀🫂❤️</p>
+      <p>Thank you so much, beta, for everything you've done for me.</p>
+      <p>The first time I saw you standing near the shop with that innocent face, wearing a white and pink shirt, I instantly thought you looked really good.</p>
+      <p>One phone call completely changed our lives. I almost started liking you during that call itself—the way you talked, your patience, and how calmly you spoke to me that night.</p>
+      <p>The day we met, I liked you even more. I had told you many times about those unknown calls, and whenever one came, you would immediately ask who it was. That's where I saw your care and concern for me.</p>
+      <p>On January 1st, when you protected me, I developed a great opinion about you. I felt safe with you, like I was in good hands.</p>
+      <p>And the way you used to call me "Madam" always sounded so sweet and pleasant. It never failed to make me smile. 😊</p>
+      <p>We've faced so many problems together, but I don't want to include all of them here. Instead, I want to remember the beautiful moments, especially our temple date. The day you said "I miss you," those words made me emotional and stayed in my heart. 💕</p>
+      <p>All our late-night calls, conversations, and even our fights were special because they were with you.</p>
+      <p>When we spent almost 20 days together, I got to understand you completely—your love, care, attention, patience, and the way you always protected me. No matter how angry you were, you never showed it harshly towards me. Your patience and understanding meant so much.</p>
+      <p>Even our fights have now become beautiful memories that I'll cherish for a lifetime.</p>
+      <p>No matter how much I say, it will never be enough to describe how special you are to me. ✨</p>
+      <p>What I like most about you is your love and care. Whenever I say no, you stop. When I tell you something is wrong, you listen and try to understand. These are the things I truly admire about you.</p>
+      <p>But there are a few things I don't like as well. You get angry very quickly. Sometimes you find it hard to make decisions and keep things pending until the last moment, which often leads to confusion. You also get irritated easily at times. These are the things I wish you could improve.</p>
+      <p>Even with these flaws, your good qualities outweigh everything else. That's why you are so special to me. ❤️</p>
+      <p>Please try to control your anger a little and stop getting irritated so easily. Even if you raise your voice a little, I can't handle it—I end up crying. I know you don't like that, but when you're angry, it affects me deeply. That's the only thing I want you to change. Apart from that, you have so many wonderful qualities.</p>
+      <p>Sometimes I feel like you'll always stay with me, but at the same time, there's a fear that one day things might change. Still, I pray to God every day that you remain in my life. It's not selfishness—it's because you mean so much to me. If one day you feel happier with someone else, I would let you go where your heart truly belongs.</p>
+      <p>Thank you so much for being with me all these days. I sincerely wish that you stay in my life for a lifetime.</p>
+      <p>Happiest Birthday to my precious one... ❤️</p>
+      <p>No matter what happens, you will always be one of the best parts of my life, and I will always remember you.</p>
+      <p>From the bottom of my heart, I pray that you stay happy, achieve great things, reach even better heights in life, and live peacefully without any disturbances.</p>
+      <p>Once again, Happy Birthday to my charm. ❤️🩹👣...</p>
+      <p style="margin-top: 20px;">Thank youhhhhhhh Chinnuuuu ❤️</p>
+      <p><strong>You're my forever 11:11 ✨🤍</strong></p>
+      <p><strong>Lots of loveeeee ❤️🫀🫂</strong></p>
+    </div>
+  </div>
+
+  <!-- ==================== 7. SCATTERED MEMORIES ==================== -->
+  <section id="scattered" class="section">
+    <h2 class="section-title reveal">Little Moments, Big Feelings 💭</h2>
+    <div class="scattered-grid">
+      <div class="scattered-card scatter-1 reveal">
+        <img src="photos/WhatsApp Image 2026-06-18 at 18.13.12.jpeg" alt="Memory" loading="lazy">
+        <div class="scattered-feeling glass">
+          <p>"This photo makes me smile every single time I look at it. Your vibe is just unmatched 🔥"</p>
+        </div>
+      </div>
+      <div class="scattered-card scatter-2 reveal">
+        <img src="photos/WhatsApp Image 2026-06-18 at 18.17.19.jpeg" alt="Memory" loading="lazy">
+        <div class="scattered-feeling glass">
+          <p>"I remember exactly when I first saw this — I literally said 'HOW can someone be this amazing?' 👑"</p>
+        </div>
+      </div>
+      <div class="scattered-card scatter-3 reveal">
+        <img src="photos/WhatsApp Image 2026-06-18 at 18.17.22.jpeg" alt="Memory" loading="lazy">
+        <div class="scattered-feeling glass">
+          <p>"This one hit different. The look, the moment, everything — pure gold 💫"</p>
+        </div>
+      </div>
+      <div class="scattered-card scatter-4 reveal">
+        <img src="photos/WhatsApp Image 2026-06-18 at 18.17.22 (1).jpeg" alt="Memory" loading="lazy">
+        <div class="scattered-feeling glass">
+          <p>"My absolute favourite. I don't need any reason — just looking at this makes everything better 💖"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. SURPRISE — BALLOON POP GAME ==================== -->
+  <section id="surprise" class="section">
+    <h2 class="section-title reveal">Pop the Balloons! 🎈</h2>
+    <p class="surprise-subtitle reveal">Each balloon holds a special wish just for you — pop them all!</p>
+    <div class="balloon-field" id="balloon-field"></div>
+    <div class="wishes-counter reveal">
+      <span id="wishes-found">0</span> / <span id="wishes-total">10</span> wishes found ✨
+    </div>
+  </section>
+
+  <!-- Wish reveal card -->
+  <div class="wish-reveal" id="wish-reveal">
+    <div class="wish-card glass">
+      <div class="wish-emoji" id="wish-emoji">🎉</div>
+      <p class="wish-text" id="wish-text"></p>
+      <button class="wish-close" id="wish-close">Keep Popping! 🎈</button>
+    </div>
+  </div>
+
+  <!-- ==================== 9. BIRTHDAY CAKE ==================== -->
+  <section id="cake" class="section">
+    <h2 class="section-title reveal">Make a Wish & Blow the Candle 🎂</h2>
+    <p class="cake-instruction reveal">Click the candle to blow it out!</p>
+    <div class="cake-container reveal">
+      <div class="cake" id="cake-element">
+        <div class="candle" id="candle">
+          <div class="candle-stripe"></div>
+          <div class="flame-container">
+            <div class="flame" id="flame"></div>
+            <div class="flame-glow"></div>
+            <div class="smoke-container" id="smoke-container"></div>
+          </div>
+        </div>
+        <div class="cake-layer cake-layer-3"></div>
+        <div class="cake-layer cake-layer-2"></div>
+        <div class="cake-layer cake-layer-1"></div>
+      </div>
+      <p class="cake-message" id="cake-message">🌟 May all your wishes come true, Chinnodaaa! 🌟</p>
+    </div>
+  </section>
+
+  <!-- ==================== 10. MUSIC ==================== -->
+  <section id="music" class="section">
+    <h2 class="section-title reveal">Your Favourite Song 🎵</h2>
+    <div class="floating-notes" id="floating-notes">
+      <span style="left:10%;animation-delay:0s;">🎵</span>
+      <span style="left:30%;animation-delay:1.5s;">🎶</span>
+      <span style="left:55%;animation-delay:3s;">🎵</span>
+      <span style="left:75%;animation-delay:0.8s;">🎶</span>
+      <span style="left:90%;animation-delay:2.2s;">🎵</span>
+    </div>
+    <div class="music-card glass reveal">
+      <div class="music-photo">
+        <img src="photos/WhatsApp Image 2026-06-18 at 18.17.23 (1).jpeg" alt="Us" loading="lazy">
+      </div>
+      <div class="music-disc" id="music-disc">
+        <div class="music-disc-ring"></div>
+        <div class="music-disc-inner"></div>
+      </div>
+      <h3 class="music-title">Adi Penne</h3>
+      <p class="music-artist">Your Favourite ❤️</p>
+      <div class="equalizer" id="equalizer">
+        <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+        <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+        <div class="eq-bar"></div><div class="eq-bar"></div><div class="eq-bar"></div>
+      </div>
+      <button class="music-play-btn" id="music-play-btn">
+        <span id="play-icon">▶</span> Play Song
+      </button>
+    </div>
+  </section>
+
+  <!-- ==================== 11. FINAL PHOTO COLLAGE ==================== -->
+  <section id="final" class="section">
+    <canvas id="fireworks-canvas"></canvas>
+    <div class="final-collage">
+      <img src="photos/WhatsApp Image 2026-06-18 at 18.17.23 (2).jpeg" class="collage-img c1" loading="lazy">
+      <img src="photos/WhatsApp Image 2026-06-18 at 18.17.23.jpeg" class="collage-img c2" loading="lazy">
+      <img src="photos/WhatsApp Image 2026-06-18 at 18.17.24 (1).jpeg" class="collage-img c3" loading="lazy">
+      <img src="photos/WhatsApp Image 2026-06-18 at 18.17.24.jpeg" class="collage-img c4" loading="lazy">
+      <img src="photos/WhatsApp Image 2026-06-18 at 18.17.25.jpeg" class="collage-img c5" loading="lazy">
+    </div>
+    <div class="final-content">
+      <div class="final-heart reveal">❤️</div>
+      <h2 class="final-message reveal">Happy Birthday<br>Chinnodaaa!</h2>
+      <p class="final-from reveal">— With all my love, Your Favourite Headache, Chinni 💝</p>
+    </div>
+  </section>
+
+  <!-- ==================== 12. SURPRISE REPLY ==================== -->
+  <section id="surprise-reply" class="section">
+    <h2 class="section-title reveal">Reply to the Surprise 💌</h2>
+    <p class="reply-subtitle reveal">Got something to say? Drop a surprise message back!</p>
+    <div class="reply-card glass reveal">
+      <div class="reply-decoration">
+        <span class="reply-sparkle s1">✨</span>
+        <span class="reply-sparkle s2">💫</span>
+        <span class="reply-sparkle s3">🌟</span>
+        <span class="reply-sparkle s4">✨</span>
+      </div>
+      <form id="surprise-form">
+        <div class="form-group">
+          <label for="reply-name" class="form-label">Your Name 💕</label>
+          <input type="text" id="reply-name" name="name" class="form-input" placeholder="What should I call you?" required>
+        </div>
+        <div class="form-group">
+          <label for="reply-message" class="form-label">Your Surprise Message 🎉</label>
+          <textarea id="reply-message" name="message" class="form-input form-textarea" placeholder="Write something sweet, funny, or heartfelt..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="reply-submit-btn" id="reply-submit-btn">
+          <span class="btn-text">Send Surprise 🚀</span>
+          <span class="btn-loading" style="display:none;">Sending... 💌</span>
+        </button>
+        <p class="reply-error" id="reply-error" style="display:none;color:#ff6b6b;text-align:center;margin-top:12px;font-size:0.9rem;"></p>
+      </form>
+      <div class="reply-success" id="reply-success" style="display:none;">
+        <div class="success-icon">🎊</div>
+        <h3>Message Sent!</h3>
+        <p>Your surprise reply is on its way! 💝</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio -->
+  <audio id="bg-audio" loop preload="auto">
+    <source src="song/Adi Penne(KoshalWorld.Com).mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
